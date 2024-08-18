@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="offer-container">
+    <div class="offer">
+      <div class="offer-text">
+        <h1 class="offer-text__title">Попробуй премиум подписку на LogTime <span>бесплатно!</span></h1>
+        <p class="offer-text__desc text">Достигай желаемые цели эффективнее и быстрее, используя все возможности без ограничений</p>
+      </div>
+      <img src="assets/img/image.svg" alt="cool-gay-with-premium-box" class="offer-img">
+      <div class="offer-advantages">
+        <ul class="offer-advantages__list">
+          <li class="offer-advantages__item">
+            <img src="assets/icons/task.svg" alt="true-icon" class="offer-advantages__icon">
+            <p class="offer-advantages__text text">Сейчас ничего не спишется</p>
+          </li>
+          <li class="offer-advantages__item">
+            <img src="assets/icons/task.svg" alt="true-icon" class="offer-advantages__icon">
+            <p class="offer-advantages__text text">Напомним перед списанием</p>
+          </li>
+          <li class="offer-advantages__item">
+            <img src="assets/icons/task.svg" alt="true-icon" class="offer-advantages__icon">
+            <p class="offer-advantages__text text">Можно отменить в любой момент</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <app-offer-buttons [tariffBtn]="tariffBtnText"></app-offer-buttons>
+  </div>
+<app-offer-tariff-card (toggleChange)="onToggleChange($event)"></app-offer-tariff-card>
+</div>

@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+@import "fonts";
+
+
+:root {
+  --light-color: #fff;
+  --title-color: #171725;
+  --desc-color: #44444F;
+  --accent-color: #0062FF;
+
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0 !important;
+}
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: var(--light-color);
+  color: var(--desc-color);
+}
+
+.text {
+  color: var(--desc-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.btn {
+  color: var(--light-color);
+  height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+}
+ul {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 16px;
+  list-style: none;
+}
+
+.toggle {
+  font-weight: 600;
+  font-size: 16px;
+  z-index: 2;
+  width: 50%;
+  transition: 0.3s;
+}
