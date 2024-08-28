@@ -1,11 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { OfferTariffCardComponent } from '../offer-tariff-card/offer-tariff-card.component';
+import { OfferButtonsComponent } from '../offer-buttons/offer-buttons.component';
 
 @Component({
   selector: 'app-offer-ui',
+  standalone: true,
+  imports: [
+    CommonModule,
+    OfferTariffCardComponent,
+    OfferButtonsComponent
+  ],
   templateUrl: './offer-ui.component.html',
   styleUrls: ['./offer-ui.component.scss']
 })
-export class OfferUiComponent implements OnInit {
+export class OfferUiComponent {
  
   constructor() { }
 

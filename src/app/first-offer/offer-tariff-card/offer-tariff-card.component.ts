@@ -1,11 +1,16 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-offer-tariff-card',
+  standalone: true,
+  imports: [
+    CommonModule,
+  ],
   templateUrl: './offer-tariff-card.component.html',
   styleUrls: ['./offer-tariff-card.component.scss'],
 })
-export class OfferTariffCardComponent implements OnInit {
+export class OfferTariffCardComponent {
   public price: string = '430 ₽/год';
   isMonth: boolean = false;
 
