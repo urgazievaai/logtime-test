@@ -23,6 +23,6 @@ export class OfferUiComponent {
   tariffBtnText: string = 'Попробовать 14 дней бесплатно';
 
   onToggleChange(isMonth: boolean): void {
-    this.tariffBtnText = isMonth ? 'Попробовать 14 дней бесплатно' : 'Попробовать 7 дней бесплатно';
+    this.tariffBtnText = isMonth ? 'Попробовать 7 дней бесплатно' : 'Попробовать 14 дней бесплатно';
   }
 }
