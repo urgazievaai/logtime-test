@@ -1,0 +1,92 @@
+@mixin style-btn($primary: true) {
+  color: var(--light-color);
+  height: 44px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 12px 23px;
+
+  @if $primary {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+  } @else {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--dark-color);
+    border: 1px solid #e2e2ea;
+  }
+}
+
+@mixin tariff-toggle($monthColor, $yearColor, $togglePosition) {
+  &__toggle-btn {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 37px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 29px;
+      width: 50%;
+      right: $togglePosition;
+      background-color: #fff;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  }
+  &__sale-img {
+    z-index: 1;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+  &__toggle-month {
+    padding-left: 35px;
+    color: $monthColor;
+  }
+
+  &__toggle-year {
+    padding-left: 45px;
+    color: $yearColor;
+  }
+
+  &__toggle-input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    &:checked + .tariff__toggle-btn {
+      & .tariff__toggle-month {
+        color: #0062ff;
+      }
+      & .tariff__toggle-year {
+        color: #696974;
+      }
+      &:after {
+        right: 286px;
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+
+@mixin cells() {
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+  }
+  &__desc {
+    color: #696974;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}

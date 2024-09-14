@@ -10,8 +10,6 @@
 .offer {
   display: flex;
   flex-direction: column;
-}
-.offer-text{
   &__title {
     color: var(--title-color);
     font-size: 28px;
@@ -22,22 +20,22 @@
       color: var(--accent-color);
     }
   }
-}
-.offer-img {
-  align-self: center;
+  &__img {
+    align-self: center;
   width: 361px;
   height: 174px;
   margin: 32px 0;
-}
-.offer-advantages{
-  margin-bottom: 32px;
-  &__item {
+  }
+  &__advantages {
+    margin-bottom: 32px;
+  }
+  &__advantages-item {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 6px;
     align-items: start;
   }
-  &__icon {
+  &__advantages-icon {
     max-width: 24px;
     max-height: 24px;
   }

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { OfferTariffCardComponent } from '../offer-tariff-card/offer-tariff-card.component';
-import { OfferButtonsComponent } from '../offer-buttons/offer-buttons.component';
+import { OfferTariffCardComponent } from '../../components/offer-tariff-card/offer-tariff-card.component';
+import { TariffButtonsComponent } from 'src/app/components/tariff-buttons/tariff-buttons.component';
 
 @Component({
   selector: 'app-offer-ui',
@@ -9,20 +9,11 @@ import { OfferButtonsComponent } from '../offer-buttons/offer-buttons.component'
   imports: [
     CommonModule,
     OfferTariffCardComponent,
-    OfferButtonsComponent
+    TariffButtonsComponent,
   ],
   templateUrl: './offer-ui.component.html',
   styleUrls: ['./offer-ui.component.scss']
 })
 export class OfferUiComponent {
- 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
-  tariffBtnText: string = 'Попробовать 14 дней бесплатно';
-
-  onToggleChange(isMonth: boolean): void {
-    this.tariffBtnText = isMonth ? 'Попробовать 7 дней бесплатно' : 'Попробовать 14 дней бесплатно';
-  }
 }

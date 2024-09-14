@@ -1,15 +1,15 @@
 <div class="offer-tariff-card">
   <div class="tariff">
-    <div class="tariff-toggle">
-      <input type="checkbox" class="tariff-toggle-btn__input" id="chek">
-      <label class="tariff-toggle-btn" for="chek"> 
-        <img src="assets/icons/label.svg" alt="минус 37 процентов" class="sale">
-        <span (click)="toggleMonth()" class="tariff-toggle-btn__month toggle">На месяц</span>
-        <span (click)="toggleYear()" class="tariff-toggle-btn__year toggle">На год</span>
+    <div class="tariff__toggle">
+      <input type="checkbox" class="tariff__toggle-input" id="chek">
+      <label class="tariff__toggle-btn" for="chek"> 
+        <img src="assets/icons/label.svg" alt="минус 37 процентов" class="tariff__sale-img">
+        <span (click)="toggleMonth()" class="tariff__toggle-month toggle">На месяц</span>
+        <span (click)="toggleYear()" class="tariff__toggle-year toggle">На год</span>
       </label>
     </div>
     <div class="tariff__sale">
-      <p class="tariff__prices">{{price}}</p>
+      <p class="tariff__prices">430 ₽/мес</p>
       <span class="tariff__year-sale" [ngClass]="{'hidden': isMonth}">
         <p class="tariff__old text">8280 ₽/год</p>
         <p class="tariff__new text"> 5160 ₽/год</p>

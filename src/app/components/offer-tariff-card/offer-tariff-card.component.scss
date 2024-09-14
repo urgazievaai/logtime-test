@@ -1,0 +1,40 @@
+@import '../../styles/mixins';
+
+.offer-tariff-card {
+  display: flex;
+  flex-direction: column;
+  width: 356px;
+  border: solid 1px #e2e2ea;
+  border-radius: 12px;
+  padding: 27px 32px 40px;
+}
+.tariff {
+  margin-bottom: 32px;
+  
+  @include tariff-toggle(#696974, #0062ff, 4px);
+  
+  &__sale {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+  &__prices {
+    color: var(--dark-color);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  &__old {
+    color: #ff974a;
+    text-decoration: line-through;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.tariff-cells {
+  @include cells
+}
