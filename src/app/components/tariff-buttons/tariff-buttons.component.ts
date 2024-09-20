@@ -15,9 +15,14 @@ export class TariffButtonsComponent {
   @Input() 
   public tariffBtn?: string;
 
-  @Output('tariffBtn') tariffEmitter = new EventEmitter<string>();
+  @Output() tariffEmitter = new EventEmitter<string>();
+  @Output() skipEmitter = new EventEmitter<string>();
 
-  selectTariff(tariffBtn: string) {
-    this.tariffEmitter.emit(tariffBtn)
+
+  selectTariff() {
+    this.tariffEmitter.emit()
+  }
+  skip() {
+    this.skipEmitter.emit()
   }
 }
